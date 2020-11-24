@@ -26,8 +26,8 @@ fun TodoScreen(
             modifier = Modifier.padding(8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            items.forEach {
-                TodoListItem(it, Modifier.fillMaxWidth()) { }
+            items.forEach { item ->
+                TodoListItem(item, Modifier.fillMaxWidth(), onRemoveItem)
             }
         }
         FloatingActionButton(
